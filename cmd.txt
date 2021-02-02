@@ -10,7 +10,10 @@ dotnet new classlib -o Taste.Models
 
 dotnet new classlib -o Taste.Utility
 
+-- this is for SQLite
 dotnet new razor --auth Individual -o Taste
+-- this is for local DB
+dotnet new razor --auth Individual -uld -o Taste
 
 -- add prj to solution
 
