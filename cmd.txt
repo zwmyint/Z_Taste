@@ -1,5 +1,5 @@
 --https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet
-
+--https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-5.0&tabs=netcore-cli
 dotnet new sln -n Taste
 
 dotnet new mvc -o Taste.MVC
@@ -10,6 +10,8 @@ dotnet new classlib -o Taste.Models
 
 dotnet new classlib -o Taste.Utility
 
+dotnet new razor --auth Individual -o Taste
+
 -- add prj to solution
 
 dotnet sln Taste.sln add Taste.DataAccess\Taste.DataAccess.csproj
@@ -17,6 +19,8 @@ dotnet sln Taste.sln add Taste.DataAccess\Taste.DataAccess.csproj
 dotnet sln Taste.sln add Taste.Models\Taste.Models.csproj
 
 dotnet sln Taste.sln add Taste.Utility\Taste.Utility.csproj
+
+dotnet sln Taste.sln add Taste\Taste.csproj
 
  -- add ref to project (MVC)
 
@@ -29,4 +33,12 @@ dotnet add Taste.MVC.csproj reference ../Taste.DataAccess/Taste.DataAccess.cspro
 dotnet add Taste.DataAccess.csproj reference ../Taste.Models/Taste.Models.csproj
 
 dotnet add Taste.DataAccess.csproj reference ../Taste.Utility/Taste.Utility.csproj
+
+ -- add ref to project (Razor) with Individual user account
+
+dotnet add Taste.csproj reference ../Taste.Models/Taste.Models.csproj
+
+dotnet add Taste.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
+
+-- add identity
 
