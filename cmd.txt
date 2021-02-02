@@ -23,6 +23,8 @@ dotnet sln Taste.sln add Taste.Models\Taste.Models.csproj
 
 dotnet sln Taste.sln add Taste.Utility\Taste.Utility.csproj
 
+dotnet sln Taste.sln add Taste.MVC\Taste.MVC.csproj
+
 dotnet sln Taste.sln add Taste\Taste.csproj
 
  -- add ref to project (MVC)

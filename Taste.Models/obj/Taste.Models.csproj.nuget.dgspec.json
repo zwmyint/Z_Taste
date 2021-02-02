@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj": {}
+    "d:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj": {}
   },
   "projects": {
-    "D:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj": {
+    "d:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj",
+        "projectUniqueName": "d:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj",
         "projectName": "Taste.Models",
-        "projectPath": "D:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj",
+        "projectPath": "d:\\003\\Z_Taste\\Taste.Models\\Taste.Models.csproj",
         "packagesPath": "C:\\Users\\zaw\\.nuget\\packages\\",
-        "outputPath": "D:\\003\\Z_Taste\\Taste.Models\\obj\\",
+        "outputPath": "d:\\003\\Z_Taste\\Taste.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
