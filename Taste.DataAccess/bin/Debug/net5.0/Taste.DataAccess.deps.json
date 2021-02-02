@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Taste.DataAccess/1.0.0": {
+        "dependencies": {
+          "Taste.Models": "1.0.0",
+          "Taste.Utility": "1.0.0"
+        },
+        "runtime": {
+          "Taste.DataAccess.dll": {}
+        }
+      },
+      "Taste.Models/1.0.0": {
+        "runtime": {
+          "Taste.Models.dll": {}
+        }
+      },
+      "Taste.Utility/1.0.0": {
+        "runtime": {
+          "Taste.Utility.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Taste.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Taste.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Taste.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

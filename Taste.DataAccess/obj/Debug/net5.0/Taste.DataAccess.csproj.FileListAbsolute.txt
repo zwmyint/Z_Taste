@@ -1,0 +1,17 @@
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.DataAccess.deps.json
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.DataAccess.dll
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\ref\Taste.DataAccess.dll
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.DataAccess.pdb
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.csprojAssemblyReference.cache
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.AssemblyInfoInputs.cache
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.AssemblyInfo.cs
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.csproj.CoreCompileInputs.cache
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.dll
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\ref\Taste.DataAccess.dll
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.pdb
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Models.dll
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Utility.dll
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Models.pdb
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Utility.pdb
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.csproj.CopyComplete

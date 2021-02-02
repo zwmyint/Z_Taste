@@ -1,0 +1,32 @@
+--https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet
+
+dotnet new sln -n Taste
+
+dotnet new mvc -o Taste.MVC
+
+dotnet new classlib -o Taste.DataAccess
+
+dotnet new classlib -o Taste.Models
+
+dotnet new classlib -o Taste.Utility
+
+-- add prj to solution
+
+dotnet sln Taste.sln add Taste.DataAccess\Taste.DataAccess.csproj
+
+dotnet sln Taste.sln add Taste.Models\Taste.Models.csproj
+
+dotnet sln Taste.sln add Taste.Utility\Taste.Utility.csproj
+
+ -- add ref to project (MVC)
+
+dotnet add Taste.MVC.csproj reference ../Taste.Models/Taste.Models.csproj
+
+dotnet add Taste.MVC.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
+
+-- add ref to project (DataAccess)
+
+dotnet add Taste.DataAccess.csproj reference ../Taste.Models/Taste.Models.csproj
+
+dotnet add Taste.DataAccess.csproj reference ../Taste.Utility/Taste.Utility.csproj
+

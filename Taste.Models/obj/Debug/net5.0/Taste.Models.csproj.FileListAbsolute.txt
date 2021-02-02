@@ -1,0 +1,12 @@
+D:\003\Z_Taste\Taste.Models\bin\Debug\net5.0\Taste.Models.deps.json
+D:\003\Z_Taste\Taste.Models\bin\Debug\net5.0\Taste.Models.dll
+D:\003\Z_Taste\Taste.Models\bin\Debug\net5.0\ref\Taste.Models.dll
+D:\003\Z_Taste\Taste.Models\bin\Debug\net5.0\Taste.Models.pdb
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.csprojAssemblyReference.cache
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.AssemblyInfoInputs.cache
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.AssemblyInfo.cs
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.csproj.CoreCompileInputs.cache
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.dll
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\ref\Taste.Models.dll
+D:\003\Z_Taste\Taste.Models\obj\Debug\net5.0\Taste.Models.pdb
