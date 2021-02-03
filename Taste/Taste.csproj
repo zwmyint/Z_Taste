@@ -5,6 +5,10 @@
     <UserSecretsId>aspnet-Taste-AF32B815-51BD-4A8D-A714-85BFC017A175</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>8034</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>

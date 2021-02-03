@@ -51,6 +51,10 @@ dotnet add Taste.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
 
 // note
 Microsoft.AspNetCore.Mvc
+//https://github.com/dotnet/aspnetcore/issues/18563
+<PropertyGroup>
+  <DisableImplicitComponentsAnalyzers>true</DisableImplicitComponentsAnalyzers>
+</PropertyGroup>
 
 // lib
 jquery - datepicker
@@ -61,3 +65,12 @@ fontawesome
 toastr
 sweetalert
 tinyMCE
+
+// update of ef tools
+dotnet tool update --global dotnet-ef
+
+// for Migrations (add this package to Taste.DataAccess - Microsoft.EntityFrameworkCore.Design)
+dotnet ef migrations add AddIdentityAndCategory (with error)
+--to run inside Taste.DataAccess proj
+dotnet ef migrations add AddIdentityAndCategory -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste

@@ -15,3 +15,6 @@ D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Utility.dll
 D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Models.pdb
 D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.Utility.pdb
 D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.csproj.CopyComplete
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.DataAccess.runtimeconfig.json
+D:\003\Z_Taste\Taste.DataAccess\bin\Debug\net5.0\Taste.DataAccess.runtimeconfig.dev.json
+D:\003\Z_Taste\Taste.DataAccess\obj\Debug\net5.0\Taste.DataAccess.genruntimeconfig.cache
