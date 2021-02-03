@@ -47,3 +47,17 @@ dotnet add Taste.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
 
 -- add identity
 
+
+
+// note
+Microsoft.AspNetCore.Mvc
+
+// lib
+jquery - datepicker
+jquery.timepicker
+datatable
+fontawesome
+
+toastr
+sweetalert
+tinyMCE
