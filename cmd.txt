@@ -57,6 +57,8 @@ dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\Fo
 dotnet aspnet-codegenerator razorpage Index Empty -npm -udl -outDir .\Pages\Admin\MenuItem
 dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\MenuItem
 
+dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Customer\Home
+
 
 // note
 Microsoft.AspNetCore.Mvc
