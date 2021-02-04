@@ -10,11 +10,18 @@ namespace Taste.DataAccess.Data.Repository
         {
             _db = db;
             Category = new CategoryRepository(_db);
-            
+            FoodType = new FoodTypeRepository(_db);
+
+
+
         }
 
         public ICategoryRepository Category { get; private set; }
+        public IFoodTypeRepository FoodType { get; private set; }
 
+
+
+        //
         public void Dispose()
         {
             _db.Dispose();

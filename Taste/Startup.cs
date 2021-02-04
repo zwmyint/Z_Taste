@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Taste.DataAccess;
+using Taste.DataAccess.Data.Repository;
+using Taste.DataAccess.Data.Repository.IRepository;
 
 namespace Taste
 {
@@ -34,9 +36,12 @@ namespace Taste
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
  
+ 
+            // added
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            //services.AddRazorPages();
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +69,7 @@ namespace Taste
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }

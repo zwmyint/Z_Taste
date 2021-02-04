@@ -47,6 +47,12 @@ dotnet add Taste.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
 
 -- add identity
 
+-- add razorpage (add - Microsoft.VisualStudio.Web.CodeGeneration.Design)
+dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Admin\Category
+dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\Category
+
+dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Admin\FoodType
+dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\FoodType
 
 
 // note
@@ -73,4 +79,7 @@ dotnet tool update --global dotnet-ef
 dotnet ef migrations add AddIdentityAndCategory (with error)
 --to run inside Taste.DataAccess proj
 dotnet ef migrations add AddIdentityAndCategory -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
+
+dotnet ef migrations add AddFoodTypeToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste

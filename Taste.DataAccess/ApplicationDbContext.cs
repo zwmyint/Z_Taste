@@ -13,7 +13,10 @@ namespace Taste.DataAccess
 
         //
         public DbSet<Category> Category { get; set; }
+        public DbSet<FoodType> FoodType { get; set; }
 
+
+        
 
         //
     }
