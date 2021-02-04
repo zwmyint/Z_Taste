@@ -3137,7 +3137,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
         "compile": {
           "bin/placeholder/Taste.Models.dll": {}

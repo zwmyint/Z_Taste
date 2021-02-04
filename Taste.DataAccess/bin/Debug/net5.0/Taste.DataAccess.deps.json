@@ -2263,7 +2263,8 @@
       },
       "Taste.Models/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.2",
+          "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
         "runtime": {
           "Taste.Models.dll": {}

@@ -53,6 +53,9 @@ dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\Ca
 
 dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Admin\FoodType
 dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\FoodType
+-- used -npm for without page model
+dotnet aspnet-codegenerator razorpage Index Empty -npm -udl -outDir .\Pages\Admin\MenuItem
+dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\MenuItem
 
 
 // note
@@ -82,4 +85,7 @@ dotnet ef migrations add AddIdentityAndCategory -c ApplicationDbContext -o Migra
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 
 dotnet ef migrations add AddFoodTypeToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
+
+dotnet ef migrations add AddMenuItemToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
