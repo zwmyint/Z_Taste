@@ -55,11 +55,15 @@ dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\Ca
 
 dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Admin\FoodType
 dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\FoodType
+
 -- used -npm for without page model
 dotnet aspnet-codegenerator razorpage Index Empty -npm -udl -outDir .\Pages\Admin\MenuItem
 dotnet aspnet-codegenerator razorpage Upsert Empty -udl -outDir .\Pages\Admin\MenuItem
 
 dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Customer\Home
+
+-- used -npm for without page model
+dotnet aspnet-codegenerator razorpage Index Empty -npm -udl -outDir .\Pages\Admin\User
 
 
 // note
