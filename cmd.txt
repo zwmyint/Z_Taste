@@ -45,6 +45,8 @@ dotnet add Taste.csproj reference ../Taste.Models/Taste.Models.csproj
 
 dotnet add Taste.csproj reference ../Taste.DataAccess/Taste.DataAccess.csproj
 
+dotnet add Taste.csproj reference ../Taste.Utility/Taste.Utility.csproj
+
 -- add identity
 
 -- add razorpage (add - Microsoft.VisualStudio.Web.CodeGeneration.Design)
@@ -91,3 +93,19 @@ dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 
 dotnet ef migrations add AddMenuItemToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
+
+dotnet ef migrations add AddUsersToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
+
+
+
+
+-- for identity
+-- --dbContext|-dc       : Name of the DbContext to use, or generate (if it does not exist).
+-- --useDefaultUI|-udui  : Use this option to setup identity and to use Default UI.
+-- -layout|-l           : Specify a custom layout file to use.
+
+dotnet aspnet-codegenerator identity -dc ApplicationDbContext
+
+
+Microsoft.AspNetCore.Identity.UI

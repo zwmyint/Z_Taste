@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Taste.DataAccess;
 using Taste.DataAccess.Data.Repository;
 using Taste.DataAccess.Data.Repository.IRepository;
+using Taste.Utility;
 
 namespace Taste
 {
@@ -32,13 +33,20 @@ namespace Taste
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            
             services.AddDatabaseDeveloperPageExceptionFilter();
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+
+            services.AddIdentity<IdentityUser,IdentityRole>()
+                .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
- 
- 
+                // AddDefaultUi>>> UIFramework.Bootstrap4 is not needed with .net core 3.0 onwards...
+                // .AddDefaultUI(UIFramework.Bootstrap4)
+
             // added
+            //services.AddSingleton<IEmailSender, EmailSender>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
