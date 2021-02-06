@@ -15,6 +15,7 @@ using Taste.DataAccess;
 using Taste.DataAccess.Data.Repository;
 using Taste.DataAccess.Data.Repository.IRepository;
 using Taste.Utility;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Taste
 {
@@ -43,8 +44,6 @@ namespace Taste
                 // .AddDefaultUI(UIFramework.Bootstrap4)
 
             // added
-            //services.AddSingleton<IEmailSender, EmailSender>();
-
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
@@ -57,6 +56,8 @@ namespace Taste
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
             });
 
+            // added
+            services.AddSingleton<IEmailSender, EmailSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
