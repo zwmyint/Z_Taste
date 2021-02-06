@@ -1,9 +1,12 @@
 @page
+@using Taste.Utility
 @{
     ViewData["Title"] = "Index";
 }
 
-<div class="border backgroundWhite container">
+@if (User.IsInRole(SD.ManagerRole))
+{
+    <div class="border backgroundWhite container">
         <div class="row">
             <div class="col-6">
                 <h2 class="text-primary">Users List</h2>
@@ -24,8 +27,14 @@
             </thead>
         </table>
     </div>
-
-
+}
+else
+{
+    <div>
+        <h1 class="text-danger"> Access Denied</h1>
+    </div>
+}
+    
 @section Scripts{
     <script src="~/js/user.js"></script>
 }
