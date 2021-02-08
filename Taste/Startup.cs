@@ -46,6 +46,14 @@ namespace Taste
             // added
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            // added for Cart
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
 
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -77,6 +85,7 @@ namespace Taste
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession(); //added for cart
 
             app.UseRouting();
 

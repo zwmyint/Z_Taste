@@ -65,6 +65,9 @@ dotnet aspnet-codegenerator razorpage Index Empty -udl -outDir .\Pages\Customer\
 -- used -npm for without page model
 dotnet aspnet-codegenerator razorpage Index Empty -npm -udl -outDir .\Pages\Admin\User
 
+dotnet aspnet-codegenerator razorpage Details Empty -udl -outDir .\Pages\Customer\Home
+
+
 
 // note
 Microsoft.AspNetCore.Mvc
@@ -101,6 +104,10 @@ dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 dotnet ef migrations add AddUsersToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 
+dotnet ef migrations add AddShoppingCartToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
+
+
 
 
 
@@ -110,6 +117,6 @@ dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 -- -layout|-l           : Specify a custom layout file to use.
 
 dotnet aspnet-codegenerator identity -dc ApplicationDbContext
-
+-- empty mean generate all files
 
 Microsoft.AspNetCore.Identity.UI
