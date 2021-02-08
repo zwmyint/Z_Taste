@@ -107,7 +107,8 @@ dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 dotnet ef migrations add AddShoppingCartToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
 dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 
-
+dotnet ef migrations add AddOrderHeaderAndDetailsToDb -c ApplicationDbContext -o Migrations/ --startup-project ../Taste
+dotnet ef database update -c ApplicationDbContext --startup-project ../Taste
 
 
 
