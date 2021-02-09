@@ -1,5 +1,7 @@
 @page
 @model Taste.Pages.Customer.Cart.SummaryModel
+@inject IOptions<Taste.Utility.StripeSettings> Stripe
+@using Microsoft.Extensions.Options
 @{
     ViewData["Title"] = "Summary";
 }
@@ -95,7 +97,7 @@
                                             </li>
                                         }
                                         <li class="list-group-item d-flex justify-content-between bg-light">
-                                            <small class="text-info">Total (SGD)</small>
+                                            <small class="text-info">Total (USD)</small>
                                             <strong class="text-info">$@total.ToString("0.00")</strong>
                                         </li>
                                     </ul>
@@ -106,6 +108,22 @@
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-12 col-md-4 offset-md-8">
+                                @{ 
+                                    var OrderTotalForStripe = Model.detailCart.OrderHeader.OrderTotal * 100;
+                                }
+                                <script src="https://checkout.stripe.com/checkout.js"
+                                    class="stripe-button"
+                                    data-key="@Stripe.Value.PublishableKey"
+                                    data-amount="@OrderTotalForStripe"
+                                    data-name="Z Taste"
+                                    data-label="Place Order"
+                                    data-description="Good Z Taste Desc"
+                                    data-locale="auto"
+                                    data-allow-remember-me="false"
+                                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png">
+                                </script>
+                                @* To Hide Stripe Btn *@
+                                <script>document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';</script>
                                 <button type="submit" id="btnPlaceOrder" onclick="return validateInput()" value="Place Order" class="btn btn-success form-control">Place Order</button>
                             </div>
                         </div>

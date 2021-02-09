@@ -8,8 +8,8 @@ namespace Taste.Utility
         //
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            throw new System.NotImplementedException();
-            //return Task.CompletedTask;
+            //throw new System.NotImplementedException();
+            return Task.CompletedTask;
             //https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-3.0&tabs=visual-studio#create-full-identity-ui-source
             //https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-5.0&tabs=visual-studio#create-full-identity-ui-source
         }

@@ -16,6 +16,7 @@ using Taste.DataAccess.Data.Repository;
 using Taste.DataAccess.Data.Repository.IRepository;
 using Taste.Utility;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Stripe;
 
 namespace Taste
 {
@@ -54,6 +55,7 @@ namespace Taste
                 options.Cookie.IsEssential = true;
             });
 
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
 
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -66,6 +68,13 @@ namespace Taste
 
             // added
             services.AddSingleton<IEmailSender, EmailSender>();
+
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = "424796598734451";
+                facebookOptions.AppSecret = "c61dc08e23784997d0e31a19860cb6bc";
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -97,6 +106,8 @@ namespace Taste
                 endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
+
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
         }
     }
 }
