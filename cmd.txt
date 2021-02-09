@@ -127,3 +127,17 @@ dotnet aspnet-codegenerator identity -dc ApplicationDbContext
 -- empty mean generate all files
 
 Microsoft.AspNetCore.Identity.UI
+
+
+
+ms azure
+
+ID
+f077be09-d58a-47fc-a161-757b221aca6c
+Value
+A2mqZcV9B58qp.u3wR8wUTl4B8..j-Pd.R
+
+Z_Taste API
+12/31/2299
+A2mqZcV9B58qp.u3wR8wUTl4B8..j-Pd.R
+f077be09-d58a-47fc-a161-757b221aca6c
