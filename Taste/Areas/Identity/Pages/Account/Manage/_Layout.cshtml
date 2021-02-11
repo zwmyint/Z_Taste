@@ -1,4 +1,4 @@
-﻿@{
+﻿@* @{
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
         Layout = (string)parentLayout;
@@ -7,7 +7,12 @@
     {
         Layout = "/Areas/Identity/Pages/_Layout.cshtml";
     }
+} *@
+
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
 }
+
 
 <h2>Manage your account</h2>
 

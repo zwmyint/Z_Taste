@@ -17,6 +17,7 @@ using Taste.DataAccess.Data.Repository.IRepository;
 using Taste.Utility;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Stripe;
+using Taste.DataAccess.Data.Initializer;
 
 namespace Taste
 {
@@ -46,6 +47,9 @@ namespace Taste
 
             // added
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            //
+            //services.AddScoped<IDbInitializer, DbInitializer>();
 
             // added for Cart
             services.AddSession(options =>
@@ -101,6 +105,9 @@ namespace Taste
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession(); //added for cart
+
+            //
+            //dbInitializer.Initialize();
 
             app.UseRouting();
 
