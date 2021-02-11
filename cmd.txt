@@ -73,6 +73,11 @@ dotnet aspnet-codegenerator razorpage Summary Empty -udl -outDir .\Pages\Custome
 
 dotnet aspnet-codegenerator razorpage OrderConfirmation Empty -udl -outDir .\Pages\Customer\Cart
 
+dotnet aspnet-codegenerator razorpage OrderList Empty -udl -outDir .\Pages\Admin\Order
+
+dotnet aspnet-codegenerator razorpage OrderDetails Empty -udl -outDir .\Pages\Admin\Order
+
+dotnet aspnet-codegenerator razorpage ManageOrder Empty -udl -outDir .\Pages\Admin\Order
 
 
 // note

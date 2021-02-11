@@ -35,7 +35,8 @@ namespace Taste.Pages.Customer.Cart
 
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim =claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
-
+            if (claim != null)
+            {
 
                 IEnumerable<ShoppingCart> cart = _unitOfWork.ShoppingCart.GetAll(c => c.ApplicationUserId == claim.Value);
 
@@ -51,7 +52,7 @@ namespace Taste.Pages.Customer.Cart
                     OrderDetailsCartVM.OrderHeader.OrderTotal += (cartList.MenuItem.Price * cartList.Count);
                 }
 
-
+            }
 
         }
 

@@ -16,6 +16,8 @@
         <h1 class="h3 mb-3 font-weight-normal text-primary" style="text-align:center">Sign In</h1>
 
         <div class="social-login pb-0 mb-0">
+        @if (Model.ExternalLogins?.Count > 0)
+        {
             @foreach (var provider in Model.ExternalLogins)
             {
                 
@@ -39,11 +41,15 @@
                     @* <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button> *@
                 
             }
+        }
         </div>
 
     </form>
     <form id="account" method="post">
-        <p style="text-align:center"> OR </p>
+        @if (Model.ExternalLogins?.Count > 0)
+        {
+            <p style="text-align:center"> OR </p>
+        }
         <input asp-for="Input.Email" placeholder="Email..." type="email" required="" autofocus="" class="mb-1 form-control" />
         <input asp-for="Input.Password" placeholder="Password..." type="password" required="" class="form-control" />
         <button type="submit" class="btn btn-success btn-block"><i class="fas fa-sign-in-alt"></i> Sign in</button>
