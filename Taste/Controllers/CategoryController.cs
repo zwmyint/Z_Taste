@@ -27,8 +27,14 @@ namespace Taste.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //return Json(new { data = _unitOfWork.SP_Call.ReturnList<Category>("usp_GetAllCategory", null) });
-            return Json(new { data = _unitOfWork.Category.GetAll() });
+            return Json(new { data = _unitOfWork.SP_Call.ReturnList<Category>("sp_GetAllCategory", null) });
+            //return Json(new { data = _unitOfWork.Category.GetAll() });
+
+            /* CREATE PROCEDURE dbo.sp_GetAllCategory
+            AS
+            SELECT * FROM dbo.Category
+            GO */
+
         }
 
         //
